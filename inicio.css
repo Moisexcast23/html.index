@@ -32,33 +32,26 @@ body#Perfiles > div {
     transform: scale(1);
     transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
   }
-/* Estilos por defecto para pantallas más grandes */
-body {
-  font-size: 16px;
-  /* ... otros estilos ... */
+.contenedor-flex {
+  display: flex;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  align-items: center; /* Alinea los elementos verticalmente al centro */
+  flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si no hay suficiente espacio */
 }
 
-/* Estilos para pantallas con un ancho máximo de 768px (típico de tablets) */
+.item-flex {
+  width: 30%; /* Cada elemento ocupa el 30% del ancho */
+  margin-bottom: 20px;
+}
+
 @media (max-width: 768px) {
-  body {
-    font-size: 14px;
-    /* ... otros estilos específicos para tablets ... */
-  }
-
-  .columna {
-    width: 100%; /* En pantallas más pequeñas, las columnas ocupan todo el ancho */
-    float: none; /* Evitar que las columnas floten */
+  .item-flex {
+    width: 48%; /* En pantallas más pequeñas, dos elementos por fila */
   }
 }
 
-/* Estilos para pantallas con un ancho máximo de 480px (típico de móviles) */
 @media (max-width: 480px) {
-  body {
-    font-size: 12px;
-    /* ... otros estilos específicos para móviles ... */
-  }
-
-  h1 {
-    font-size: 1.5em; /* Reducir el tamaño del título en móviles */
+  .item-flex {
+    width: 100%; /* En móviles, un elemento por fila */
   }
 }
